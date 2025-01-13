@@ -15,28 +15,29 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: url('/static/images/end.png') no-repeat center center/cover, 
+            background: url('/static/images/end.png') no-repeat center center/cover,
                         linear-gradient(135deg, #6e7c9f, #4b5563); /* Background image with gradient */
             background-attachment: fixed;
-            color: white;
+            color: #4a3f39; /* Soft brownish-gray text */
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #f7f3f1; /* Light neutral background */
         }
 
         h1 {
             font-size: 3.5em;
             font-weight: bold;
-            color: #f9d342; /* Golden yellow */
+            color: #7c5c4f; /* Warm neutral brown */
             margin-bottom: 20px;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
         }
 
         form {
-            background: rgba(0, 0, 0, 0.7); /* Dark form background */
+            background: rgba(255, 255, 255, 0.8); /* Light white form background */
             padding: 30px;
             border-radius: 10px;
             width: 100%;
@@ -51,7 +52,7 @@
             padding: 12px;
             margin-bottom: 20px;
             font-size: 1.2em;
-            border: 1px solid #f9d342;
+            border: 1px solid #7c5c4f;
             border-radius: 5px;
             background-color: #fff;
         }
@@ -59,8 +60,8 @@
         form button {
             padding: 12px 30px;
             font-size: 1.2em;
-            background-color: #f9d342;
-            color: black;
+            background-color: #7c5c4f; /* Warm neutral brown */
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -68,18 +69,18 @@
         }
 
         form button:hover {
-            background-color: #f39c12;
+            background-color: #a2885f; /* Subtle golden brown */
         }
 
         h2 {
             font-size: 2.2em;
             margin-bottom: 20px;
-            color: #f9d342;
+            color: #7c5c4f;
         }
 
         /* Transparent background for table container */
         .table-container {
-            background: rgba(0, 0, 0, 0.5); /* 50% transparent black */
+            background: rgba(255, 255, 255, 0.8); /* Light background */
             padding: 40px;
             border-radius: 15px;
             width: 100%;
@@ -98,31 +99,29 @@
         th, td {
             padding: 12px;
             text-align: left;
-            border: 1px solid #f9d342;
+            border: 1px solid #7c5c4f; /* Warm neutral brown border */
         }
 
         table th{
-            background-color: #ffcc00;
+            background-color: #7c5c4f; /* Warm brown */
             color: white;
         }
 
         th {
-            background-color: #323c50; /* Dark grayish tone to match the overall theme */
-            color: white;
-            background: #2d2d2d;
+            background-color: #6e7c9f; /* Soft muted blue-gray */
         }
 
         tr:nth-child(even) {
-            background-color: #323c50;
+            background-color: #f7f3f1; /* Light background */
         }
 
         tr:hover {
-            background-color: #f39c12;
+            background-color: #a2885f; /* Subtle golden brown */
             color: white;
         }
 
         a {
-            color: #000000;
+            color: #7c5c4f; /* Warm brown */
             font-size: 1.2em;
             text-decoration: none;
             margin-top: 20px;

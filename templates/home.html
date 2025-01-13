@@ -16,24 +16,25 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background: url('/static/images/library-bg.png') no-repeat center center/cover;
+            background: linear-gradient(135deg, #f5f1e1, #c49a6c); /* Light brown gradient */
             background-attachment: fixed;
-            color: white;
+            color: #4a3f39; /* Dark brown text */
             height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
         header {
-            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
             padding: 30px 0;
             text-align: center;
             width: 100%;
+            border-bottom: 2px solid #6b4f3b; /* Dark brown border */
         }
 
         header h1 {
             font-size: 4em;
-            color: #fff;
+            color: #6b4f3b; /* Dark brown */
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -51,7 +52,7 @@
         }
 
         nav ul li a {
-            color: white;
+            color: #6b4f3b; /* Dark brown links */
             text-decoration: none;
             font-size: 1.3em;
             font-weight: bold;
@@ -59,6 +60,7 @@
 
         nav ul li a:hover {
             text-decoration: underline;
+            color: #a17f5b; /* Lighter brown on hover */
         }
 
         .intro {
@@ -66,8 +68,9 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            background: rgba(255, 255, 255, 0.85); /* Light white background */
             border-radius: 10px;
+            color: #4a3f39; /* Dark brown text */
         }
 
         .intro h2 {
@@ -76,18 +79,18 @@
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: 1px;
-            color: beige;
+            color: #6b4f3b; /* Dark brown title */
         }
 
         .intro p {
             font-size: 1.2em;
             line-height: 1.8;
-            color: #ddd;
+            color: #6b4f3b; /* Dark brown text */
         }
 
         footer {
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
+            background: rgba(255, 255, 255, 0.8); /* Light white background */
+            color: #4a3f39; /* Dark brown footer text */
             text-align: center;
             padding: 15px 0;
             width: 100%;

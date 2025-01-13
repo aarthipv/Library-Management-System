@@ -15,9 +15,9 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: url('/static/images/librarian-bg.png') no-repeat center center/cover;
+            background: linear-gradient(135deg, #f5f1e1, #c49a6c); /* Light brown gradient background */
             background-attachment: fixed;
-            color: white;
+            color: #4a3f39; /* Soft brown text */
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -25,10 +25,11 @@
 
         /* Header Styles */
         header {
-            background: rgba(0, 0, 0, 0.7);
-            color: rgb(255, 255, 255);
+            background: rgba(255, 255, 255, 0.85); /* Light white background for header */
+            color: #6b4f3b; /* Dark brown for header text */
             padding: 30px 0;
             text-align: center;
+            border-bottom: 2px solid #6b4f3b;
         }
 
         header h1 {
@@ -37,18 +38,18 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 20px;
-            color: #f9d342;
+            color: #6b4f3b; /* Dark brown */
         }
 
         /* Navigation Bar Styles */
         nav {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 0.9); /* Light white background for nav */
             text-align: center;
             padding: 15px;
         }
 
         nav a {
-            color: white;
+            color: #6b4f3b; /* Dark brown links */
             text-decoration: none;
             margin: 0 20px;
             font-size: 1.2em;
@@ -57,13 +58,13 @@
         }
 
         nav a:hover {
-            color: #f39c12;
+            color: #a17f5b; /* Lighter brown on hover */
         }
 
         /* Main Content Area */
         main {
             padding: 50px 20px;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(255, 255, 255, 0.85); /* Light background for main section */
             margin-top: 30px;
             border-radius: 15px;
             max-width: 1000px;
@@ -74,13 +75,14 @@
         main h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            color: #6b4f3b; /* Dark brown for title */
         }
 
         main p {
             font-size: 1.2em;
             max-width: 900px;
             margin: 0 auto 30px;
-            color: #ddd;
+            color: #6b4f3b; /* Dark brown text */
         }
 
         /* Button/Links in Main Section */
@@ -92,7 +94,7 @@
         }
 
         .dashboard-buttons a {
-            background: #f9d342;
+            background: #f9d342; /* Soft gold for buttons */
             padding: 15px 30px;
             color: rgb(0, 0, 0);
             font-size: 1.1em;
@@ -103,12 +105,12 @@
         }
 
         .dashboard-buttons a:hover {
-            background: #f39c12;
+            background: #a17f5b; /* Lighter brown on hover */
         }
 
         /* Logout Link Styling */
         .logout-link {
-            color: #f9d342;
+            color: #6b4f3b; /* Dark brown for logout */
             text-decoration: none;
             font-size: 1.2em;
             margin-top: 20px;
@@ -118,12 +120,13 @@
 
         .logout-link:hover {
             text-decoration: underline;
+            color: #a17f5b; /* Lighter brown on hover */
         }
 
         /* Footer Styling */
         footer {
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
+            background: rgba(255, 255, 255, 0.9); /* Light white background for footer */
+            color: #4a3f39; /* Soft brown footer text */
             text-align: center;
             padding: 20px 0;
             position: fixed;

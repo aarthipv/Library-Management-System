@@ -15,28 +15,29 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: url('/static/images/end.png') no-repeat center center/cover, 
+            background: url('/static/images/end.png') no-repeat center center/cover,
                         linear-gradient(135deg, #6e7c9f, #4b5563); /* Background image with gradient */
             background-attachment: fixed;
-            color: white;
+            color: #4a3f39; /* Soft brownish-gray text */
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: #f7f3f1; /* Light neutral background */
         }
 
         h1 {
             font-size: 3.5em;
             font-weight: bold;
-            color: #f9d342; /* Golden yellow */
+            color: #7c5c4f; /* Warm neutral brown */
             margin-bottom: 30px;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
         }
 
         form {
-            background: rgba(0, 0, 0, 0.7); /* Dark background for form */
+            background: rgba(255, 255, 255, 0.8); /* Light white form background */
             padding: 30px;
             border-radius: 15px;
             width: 100%;
@@ -49,7 +50,7 @@
         form label {
             display: block;
             font-size: 1.2em;
-            color: #ddd;
+            color: #7c5c4f; /* Warm brown */
             margin-bottom: 8px;
             margin-top: 20px;
         }
@@ -59,25 +60,25 @@
             padding: 12px;
             margin-bottom: 20px;
             font-size: 1.1em;
-            border: 1px solid #f9d342;
+            border: 1px solid #7c5c4f; /* Warm brown */
             border-radius: 5px;
             background-color: #fff;
         }
 
         form button {
-            background-color: #f9d342;
-            color: rgb(0, 0, 0);
+            background-color: #7c5c4f; /* Warm neutral brown */
+            color: white;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         form button:hover {
-            background-color: #f39c12;
+            background-color: #a2885f; /* Subtle golden brown */
         }
 
         .back-link {
-            color: #f9d342;
+            color: #7c5c4f; /* Warm brown */
             font-size: 1.2em;
             text-decoration: none;
             margin-top: 20px;

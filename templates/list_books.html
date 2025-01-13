@@ -15,34 +15,32 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: url('/static/images/end.png') no-repeat center center/cover, 
-                        linear-gradient(135deg, #6e7c9f, #4b5563); /* Background image with gradient */
+            background: linear-gradient(135deg, #f7f3f1, #c2b09b); /* Light brown gradient background */
             background-attachment: fixed;
-            color: white;
+            color: #4a3f39; /* Soft brownish-gray text */
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: #2d2d2d; /* Fallback dark background */
         }
 
         h1 {
             font-size: 3.5em;
             font-weight: bold;
-            color: #f9d342; /* Soft golden yellow for title */
+            color: #7c5c4f; /* Warm brown */
             margin-bottom: 30px;
             text-align: center;
             animation: fadeIn 1s ease-in-out; /* Animation for the title */
         }
 
         .table-container {
-            background: rgba(0, 0, 0, 0.8); /* Dark background for table */
+            background: white; /* White background for table container */
             padding: 40px;
             border-radius: 15px;
             width: 100%;
             max-width: 1000px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Soft shadow */
             animation: slideIn 1s ease-out; /* Animation for the table */
         }
 
@@ -52,33 +50,28 @@
             margin-top: 20px;
         }
 
-        table th{
-            background-color: #ffcc00;
-            color: white;
-        }
-
         th, td {
             padding: 12px;
             text-align: left;
-            border: 1px solid #f9d342;
+            border: 1px solid #7c5c4f; /* Warm brown borders */
         }
 
-        th {
-            background-color: #323c50; /* Darker grayish-blue matching the theme */
+        table th {
+            background-color: #7c5c4f; /* Warm brown for header */
             color: white;
         }
 
         tr:nth-child(even) {
-            background-color: #323c50;
+            background-color: #f4e1c1; /* Light brown for even rows */
         }
 
         tr:hover {
-            background-color: #f39c12;
+            background-color: #a2885f; /* Darker brown on hover */
             color: white;
         }
 
         a {
-            color: #000000;
+            color: #7c5c4f;
             text-decoration: none;
             font-size: 1.2em;
         }
@@ -90,6 +83,7 @@
         .back-link {
             text-align: center;
             margin-top: 20px;
+            color: #7c5c4f; /* Warm brown */
         }
 
         /* Keyframe Animations */

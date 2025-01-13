@@ -15,27 +15,27 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: url('/static/images/end.png') no-repeat center center/cover;
+            background: url('/static/images/end.png') no-repeat center center/cover, 
+                        linear-gradient(135deg, #f5f1e1, #c49a6c); /* Background image and gradient */
             background-attachment: fixed;
-            color: white;
+            color: #4a3f39; /* Dark brown text color */
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: #2d2d2d; /* Dark background for content contrast */
         }
 
         h1 {
             font-size: 3em;
             font-weight: bold;
-            color: #ffeb94; /* Soft golden yellow for title */
+            color: #6b4f3b; /* Dark brown for title */
             margin-bottom: 30px;
             text-align: center;
         }
 
         .form-container {
-            background: rgba(0, 0, 0, 0.7); /* Dark form background */
+            background: rgba(255, 255, 255, 0.85); /* Light white background with some transparency */
             padding: 40px;
             border-radius: 10px;
             width: 100%;
@@ -45,7 +45,7 @@
 
         .form-container label {
             font-size: 1.1em;
-            color: #000000;
+            color: #6b4f3b; /* Dark brown for labels */
             margin-bottom: 8px;
             display: block;
         }
@@ -54,19 +54,19 @@
             width: 100%;
             padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #f9d342;
+            border: 1px solid #6b4f3b; /* Dark brown border */
             border-radius: 5px;
             background: #fff;
             font-size: 1.1em;
         }
 
         .form-container input:focus {
-            border-color: #f39c12; /* Focus effect */
+            border-color: #a17f5b; /* Lighter brown on focus */
             outline: none;
         }
 
         .form-container button {
-            background: #f9d342;
+            background: linear-gradient(135deg, #f9d342, #f39c12); /* Golden yellow to warm orange gradient */
             color: rgb(0, 0, 0);
             padding: 14px;
             border: none;
@@ -78,18 +78,18 @@
         }
 
         .form-container button:hover {
-            background: #f39c12; /* Darker yellow on hover */
+            background: linear-gradient(135deg, #f39c12, #e67e22); /* Darker orange on hover */
         }
 
         .back-link {
             display: block;
             text-align: center;
-            color: #ddd;
+            color: #6b4f3b; /* Dark brown text for link */
             margin-top: 20px;
         }
 
         .back-link a {
-            color: #f9d342;
+            color: #6b4f3b;
             text-decoration: none;
         }
 

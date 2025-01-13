@@ -16,9 +16,9 @@
         body {
             font-family: 'Arial', sans-serif;
             background: url('/static/images/end.png') no-repeat center center/cover, 
-                        linear-gradient(135deg, #6e7c9f, #4b5563); /* Background image with gradient */
+                        linear-gradient(135deg, #f7f3f1, #c2b09b); /* Background with light neutral tones */
             background-attachment: fixed;
-            color: white;
+            color: #4a3f39; /* Soft brownish-gray text */
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -26,10 +26,21 @@
             align-items: center;
         }
 
+        .header-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
         h1 {
             font-size: 3.5em;
             font-weight: bold;
-            color: #f9d342; /* Golden yellow */
+            color: #7c5c4f; /* Warm brown */
             margin-bottom: 20px;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
@@ -39,25 +50,34 @@
             font-size: 2.5em;
             margin-top: 30px;
             margin-bottom: 20px;
-            color: #f9d342;
+            color: #7c5c4f; /* Warm brown */
+        }
+
+        .content-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 20px;
         }
 
         table {
-            width: 80%;
-            margin-top: 20px;
+            width: 100%;
             border-collapse: collapse;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(255, 255, 255, 0.9); /* Light background for table */
             border-radius: 10px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
-        table th{
-            background-color: #000000;
+        table th {
+            background-color: #7c5c4f; /* Warm brown for table headers */
             color: white;
         }
 
         table, th, td {
-            border: 1px solid #f9d342;
+            border: 1px solid #7c5c4f; /* Border with warm brown */
         }
 
         th, td {
@@ -66,17 +86,12 @@
             font-size: 1.1em;
         }
 
-        th {
-            background-color: #323c50;
-            color: white;
-        }
-
         tr:nth-child(even) {
-            background-color: #4b5563;
+            background-color: #e1d7cd; /* Light brown for even rows */
         }
 
         tr:hover {
-            background-color: #f39c12;
+            background-color: #a2885f; /* Darker brown on hover */
             color: white;
         }
 
@@ -84,11 +99,11 @@
             font-size: 1.2em;
             text-align: center;
             margin-top: 20px;
-            color: #ddd;
+            color: #7c5c4f; /* Warm brown */
         }
 
         a {
-            color: #f9d342;
+            color: #7c5c4f;
             font-size: 1.2em;
             text-decoration: none;
             margin-top: 20px;
@@ -121,71 +136,75 @@
 </head>
 <body>
 
-    <h1>Overdue and Borrowed Books</h1>
+    <div class="header-box">
+        <h1>Overdue and Borrowed Books</h1>
+    </div>
     
-    {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-            <ul>
-                {% for category, message in messages %}
-                    <li class="{{ category }}">{{ message }}</li>
-                {% endfor %}
-            </ul>
+    <div class="content-box">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <h2>Overdue Books:</h2>
+        {% if overdue_books %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in overdue_books %}
+                        <tr>
+                            <td>{{ book[0] }}</td>
+                            <td>{{ book[1] }}</td>
+                            <td>{{ book[2] }}</td>
+                            <td>{{ book[3] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No overdue books.</p>
         {% endif %}
-    {% endwith %}
 
-    <h2>Overdue Books:</h2>
-    {% if overdue_books %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Book ID</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Due Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for book in overdue_books %}
+        <h2>Borrowed Books:</h2>
+        {% if borrowed_books %}
+            <table>
+                <thead>
                     <tr>
-                        <td>{{ book[0] }}</td>
-                        <td>{{ book[1] }}</td>
-                        <td>{{ book[2] }}</td>
-                        <td>{{ book[3] }}</td>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Due Date</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p>No overdue books.</p>
-    {% endif %}
+                </thead>
+                <tbody>
+                    {% for book in borrowed_books %}
+                        <tr>
+                            <td>{{ book[0] }}</td>
+                            <td>{{ book[1] }}</td>
+                            <td>{{ book[2] }}</td>
+                            <td>{{ book[3] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No borrowed books.</p>
+        {% endif %}
 
-    <h2>Borrowed Books:</h2>
-    {% if borrowed_books %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Book ID</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Due Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for book in borrowed_books %}
-                    <tr>
-                        <td>{{ book[0] }}</td>
-                        <td>{{ book[1] }}</td>
-                        <td>{{ book[2] }}</td>
-                        <td>{{ book[3] }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p>No borrowed books.</p>
-    {% endif %}
-
-    <a href="/user_dashboard">Back to Dashboard</a>
+        <a href="/user_dashboard">Back to Dashboard</a>
+    </div>
 
 </body>
 </html>
